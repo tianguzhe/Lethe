@@ -10,6 +10,20 @@
 
 Lethe 取名自希腊神话中的「遗忘之河」。它通过 [Shizuku](https://shizuku.rikka.app/) 以 shell（或 root）身份调用系统包管理服务，**仅针对用户 0（主用户）** 卸载应用。系统通常仍保留预装应用的安装包，因此被卸载的系统应用之后可以一键恢复。
 
+## 下载
+
+<p align="center">
+  <a href="https://github.com/tianguzhe/Lethe/raw/main/apk/Lethe.apk">
+    <img src="apk/qrcode.png" width="200" alt="扫码下载 Lethe" />
+  </a>
+</p>
+
+<p align="center">
+  扫码或点击 <a href="https://github.com/tianguzhe/Lethe/raw/main/apk/Lethe.apk"><b>下载最新 APK</b></a>
+  <br />
+  <sub>建议使用系统相机或浏览器扫码；微信内置浏览器可能拦截 GitHub 下载。</sub>
+</p>
+
 ## 功能
 
 - **应用浏览**：列出用户 0 下的全部应用，按「全部 / 用户 / 系统 / 可恢复」筛选，支持按名称或包名搜索，可按名称、最近更新、安装包大小排序。浏览无需任何授权。
