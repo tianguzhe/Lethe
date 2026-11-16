@@ -12,8 +12,8 @@ android {
     applicationId = "io.github.xiaolong125.lethe"
     minSdk = 28
     targetSdk = 37
-    versionCode = 1
-    versionName = "1.0"
+    versionCode = 2
+    versionName = "1.0.2"
   }
 
   // Release signing reads ../keystore/keystore.properties (git-ignored) so credentials never live in the build script.
