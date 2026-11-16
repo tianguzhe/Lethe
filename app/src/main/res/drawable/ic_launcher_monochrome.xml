@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Themed-icon silhouette of the launcher art: droid head peeking over a trash bin; kept inside the 66dp safe zone. -->
+    <path android:fillColor="#FF000000" android:fillType="evenOdd"
+        android:pathData="M40,45A14,14 0,0 1,68 45Z M48,38.5m-2,0a2,2 0,1 0,4 0a2,2 0,1 0,-4 0Z M60,38.5m-2,0a2,2 0,1 0,4 0a2,2 0,1 0,-4 0Z" />
+    <path android:fillColor="#00000000" android:strokeColor="#FF000000" android:strokeWidth="2.5" android:strokeLineCap="round"
+        android:pathData="M46.5,33L42.5,26 M61.5,33L65.5,26" />
+    <path android:fillColor="#FF000000"
+        android:pathData="M36,48H72A2,2 0,0 1,74 50V53A2,2 0,0 1,72 55H36A2,2 0,0 1,34 53V50A2,2 0,0 1,36 48Z" />
+    <path android:fillColor="#FF000000" android:fillType="evenOdd"
+        android:pathData="M37,57H71L68.6,80A3,3 0,0 1,65.6 82.6H42.4A3,3 0,0 1,39.4 80Z M47.25,62h2.5v14h-2.5Z M52.75,62h2.5v14h-2.5Z M58.25,62h2.5v14h-2.5Z" />
+</vector>
