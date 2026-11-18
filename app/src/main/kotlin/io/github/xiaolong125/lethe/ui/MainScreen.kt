@@ -7,6 +7,8 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -51,6 +53,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import io.github.xiaolong125.lethe.core.AppFilter
 import io.github.xiaolong125.lethe.core.SHIZUKU_PACKAGE
+import io.github.xiaolong125.lethe.data.InstalledAppsPermission
 
 private const val SHIZUKU_DOWNLOAD = "https://shizuku.rikka.app/download/"
 private const val SKELETON_ROWS = 8
@@ -75,6 +78,13 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
 
   LaunchedEffect(Unit) {
     viewModel.noticeFlow.collect { snackbar.showSnackbar(NoticeVisuals(it.text, it.error)) }
+  }
+  // The initial load may have run before the OEM app-list permission was granted; reload once it is.
+  val appListPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+    if (granted) viewModel.loadApps()
+  }
+  LaunchedEffect(Unit) {
+    if (InstalledAppsPermission.needsRequest(context)) appListPermission.launch(InstalledAppsPermission.NAME)
   }
   // Shizuku may have been started in its own app while we were in the background.
   LifecycleResumeEffect(Unit) {

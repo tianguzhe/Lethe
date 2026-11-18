@@ -6,6 +6,8 @@
     <uses-permission
         android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
+    <!-- OEM (MIUI/HyperOS, vivo, ...) runtime gate on the app list; requested at startup where the ROM defines it. -->
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS" />
     <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
 
     <application
